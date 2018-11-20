@@ -120,13 +120,13 @@ for i in range(2,tic_by_power.shape[1]//2):
 plt.savefig(os.path.join(outputdir ,'tic_by_power_plot_p1.png'))
 
 plt.figure()
-for i in range(tic_by_power.shape[1]//2, tic_by_power.shape[1]-1):
+for i in range(tic_by_power.shape[1]//2, tic_by_power.shape[1]):
     plt.scatter(tic_by_power.iloc[:,0], tic_by_power.iloc[:,i], marker='x')
     plt.legend(loc='upper right', bbox_to_anchor=(1.3, 1.05))
     plt.title("secondhalf")
 plt.savefig(os.path.join(outputdir ,"tic_by_power_plot_p2.png"))
      
-for i in range(2, tic_by_power.shape[1]-1):
+for i in range(2, tic_by_power.shape[1]):
     plt.figure()
     plt.scatter(tic_by_power.iloc[:,0], tic_by_power.iloc[:,i], marker='x')
     plt.title(str(list(tic_by_power)[i]))
